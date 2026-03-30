@@ -14,7 +14,8 @@ if 'message_history' not in st.session_state:
 for messages in st.session_state['message_history']:
     with st.chat_message(messages['role']):
         st.text(messages['content'])
-
+# stores as [{'role':'user','content':'hi'}
+#           {'role':'assistant','content':'hello'}]
 
 user_input = st.chat_input('Type here')
 
